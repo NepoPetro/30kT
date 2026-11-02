@@ -1,0 +1,46 @@
+﻿command: manim render -ql evidence-source/probe_latex.py LatexProbe
+agent: Viki Perera
+commit: fc7a7e3c89c5abd5bc37d6ec47b25c8b116fdff4
+timestamp_utc: 2026-11-02T19:10:13Z
+---
+Manim Community v0.22.1
+
+[11/02/26 16:09:36] INFO     Writing                    tex_file_writing.py:110
+                             \special{dvisvgm:raw <g                           
+                             id='unique000'>}R =                               
+                             \frac{N_{\text{doc}}}{N_{\                        
+                             text{decl}}}\special{dvisv                        
+                             gm:raw </g>} to                                   
+                             media\Tex\e0b70c4b0b34a10c                        
+                             .tex                                              
+[11/02/26 16:10:06] INFO     Animation 0 : Partial     scene_file_writer.py:173
+                             movie file written in                             
+                             'C:\Users\Joni\30kT\media                         
+                             \videos\probe_latex\480p1                         
+                             5\partial_movie_files\Lat                         
+                             exProbe\7c8312140229a17f5                         
+                             b5299dbe3d98b1a86c5f3b176                         
+                             1594e5da46540d39c1f600.mp                         
+                             4'                                                
+[11/02/26 16:10:07] INFO     Animation 1 : Partial     scene_file_writer.py:173
+                             movie file written in                             
+                             'C:\Users\Joni\30kT\media                         
+                             \videos\probe_latex\480p1                         
+                             5\partial_movie_files\Lat                         
+                             exProbe\6cd63409e2b1c6c3c                         
+                             44036552c840c7c2e381f3b45                         
+                             fd14fcbc7fa106dc750366.mp                         
+                             4'                                                
+                    INFO     Combining to Movie file.  scene_file_writer.py:877
+[11/02/26 16:10:10] INFO                               scene_file_writer.py:999
+                             File ready at                                     
+                             'C:\Users\Joni\30kT\media                         
+                             \videos\probe_latex\480p1                         
+                             5\LatexProbe.mp4'                                 
+                                                                               
+                    INFO     Rendered LatexProbe                 manager.py:226
+                             Played 2 animations
+latex: major issue: So far, you have not checked for MiKTeX updates.
+Animation 0: Write(MathTex('R = \\frac{N_{\\text{doc}}}{N_{\\text{decl}}}')):   0%|          | 0/23 [00:00<?, ?it/s]Animation 0: Write(MathTex('R = \\frac{N_{\\text{doc}}}{N_{\\text{decl}}}')):   4%|4         | 1/23 [00:00<00:12,  1.79it/s]Animation 0: Write(MathTex('R = \\frac{N_{\\text{doc}}}{N_{\\text{decl}}}')):   9%|8         | 2/23 [00:01<00:10,  2.02it/s]Animation 0: Write(MathTex('R = \\frac{N_{\\text{doc}}}{N_{\\text{decl}}}')):  13%|#3        | 3/23 [00:01<00:14,  1.40it/s]Animation 0: Write(MathTex('R = \\frac{N_{\\text{doc}}}{N_{\\text{decl}}}')):  17%|#7        | 4/23 [00:04<00:23,  1.25s/it]Animation 0: Write(MathTex('R = \\frac{N_{\\text{doc}}}{N_{\\text{decl}}}')):  22%|##1       | 5/23 [00:04<00:16,  1.07it/s]Animation 0: Write(MathTex('R = \\frac{N_{\\text{doc}}}{N_{\\text{decl}}}')):  43%|####3     | 10/23 [00:05<00:04,  2.82it/s]Animation 0: Write(MathTex('R = \\frac{N_{\\text{doc}}}{N_{\\text{decl}}}')):  83%|########2 | 19/23 [00:05<00:00,  7.52it/s]
+---
+exit_code: 0

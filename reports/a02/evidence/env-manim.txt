@@ -1,0 +1,8 @@
+﻿command: manim --version
+agent: Viki Perera
+commit: fc7a7e3c89c5abd5bc37d6ec47b25c8b116fdff4
+timestamp_utc: 2026-11-02T19:08:58Z
+---
+Manim Community v0.22.1
+---
+exit_code: 0
