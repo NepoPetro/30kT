@@ -5,6 +5,26 @@ Milestone: A. Organización inicial y alcance
 Fecha de inspección: 2026-11-02
 Responsable: Viki P. Sitzer @mvikips
 
+
+## Evidencia auditable
+
+Este informe se acompaña de un *evidence bundle* verificable en `reports/a02/`:
+
+- `evidence/`: salida literal de cada comando de verificación, con timestamp UTC, agente, commit y código de salida.
+- `evidence-source/probe_latex.py`: código fuente de la escena de prueba con fórmula LaTeX.
+- `manifest.json`: hashes SHA-256 de cada archivo de evidencia.
+- `generate-evidence.ps1`: script que regenera la captura completa.
+- `verify.ps1`: script que recomputa los hashes y falla si un archivo fue alterado.
+
+Para verificar la integridad del bundle:
+powershell -ExecutionPolicy Bypass -File reports\a02\verify.ps1
+
+Salida esperada: `SUCCESS: all 15 entries verified.`
+
+El workflow `.github/workflows/verify-a02.yml` ejecuta esta verificación en cada Pull Request que modifique archivos bajo `reports/a02/`. Un PR que altere cualquier archivo de evidencia sin regenerar el manifiesto falla la verificación y no puede mergearse.
+
+Cada afirmación técnica de este informe puede contrastarse contra los archivos en `evidence/`: el archivo `env-python.txt` contiene la salida literal de `python --version`, `render-latex-ffprobe.txt` contiene la salida literal de `ffprobe` sobre el video de prueba, y así sucesivamente.
+
 ## Alcance
 
 Inspección read-only del repositorio `nepopetro/30kT` y del repositorio satélite `nepopetro/tmura`, más verificación e instalación de las herramientas necesarias en el entorno local. No se modificó ningún archivo versionado en ninguno de los dos repositorios durante la inspección.

@@ -1,0 +1,14 @@
+﻿command: ffprobe on LatexProbe.mp4
+agent: Viki Perera
+commit: fc7a7e3c89c5abd5bc37d6ec47b25c8b116fdff4
+timestamp_utc: 2026-11-02T19:10:27Z
+---
+codec_name=h264
+width=854
+height=480
+r_frame_rate=15/1
+format_name=mov,mp4,m4a,3gp,3g2,mj2
+duration=2.000000
+size=11451
+---
+exit_code: 0
