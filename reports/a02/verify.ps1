@@ -19,6 +19,20 @@ Write-Host "Generated: $($manifest.generated_utc)"
 Write-Host "Agent: $($manifest.agent)"
 Write-Host ""
 
+function Get-NormalizedFileHash {
+    param([string]$Path)
+    $bytes = [System.IO.File]::ReadAllBytes($Path)
+    if ($bytes.Length -ge 3 -and $bytes[0] -eq 0xEF -and $bytes[1] -eq 0xBB -and $bytes[2] -eq 0xBF) {
+        $bytes = $bytes[3..($bytes.Length - 1)]
+    }
+    $text = [System.Text.Encoding]::UTF8.GetString($bytes)
+    $normalized = $text -replace "`r`n", "`n"
+    $normalizedBytes = [System.Text.Encoding]::UTF8.GetBytes($normalized)
+    $sha = [System.Security.Cryptography.SHA256]::Create()
+    $hash = $sha.ComputeHash($normalizedBytes)
+    return ([System.BitConverter]::ToString($hash) -replace "-", "").ToLower()
+}
+
 $failures = 0
 
 foreach ($entry in $manifest.evidence) {
@@ -28,7 +42,7 @@ foreach ($entry in $manifest.evidence) {
         $failures++
         continue
     }
-    $actualHash = (Get-FileHash -Path $filePath -Algorithm SHA256).Hash.ToLower()
+    $actualHash = Get-NormalizedFileHash -Path $filePath
     if ($actualHash -ne $entry.sha256) {
         Write-Host "  MISMATCH: $($entry.file)"
         Write-Host "    expected: $($entry.sha256)"

@@ -1,97 +1,97 @@
 ﻿{
     "issue":  "2",
     "issue_slug":  "A02",
-    "generated_utc":  "2026-11-02T19:10:30Z",
+    "generated_utc":  "2026-11-04T00:18:43Z",
     "agent":  "Viki Perera",
-    "commit":  "fc7a7e3c89c5abd5bc37d6ec47b25c8b116fdff4",
+    "commit":  "758133967e3c19ce7af6a3dc4836bc618bb9521d",
     "evidence":  [
                      {
                          "file":  "evidence/context-session.txt",
-                         "sha256":  "fb105d6cdc5412aff9c3d082287703dc660330531f6a95cc8bddfc9283687bf8",
+                         "sha256":  "15dbd77bbcbf6acd6f006cad9f7a4744e5b398eb7af3611831eab88cc9c8f0c9",
                          "size_bytes":  1007,
                          "kind":  "captured"
                      },
                      {
                          "file":  "evidence/env-dvisvgm.txt",
-                         "sha256":  "ce1a9a1e3065dd8c0bddebb5aaa0470562fc3473d7126205465081133949c75a",
+                         "sha256":  "f0562e7f999ebea5655100eab9014bb6d2287d547b953dd901ed012068ef7251",
                          "size_bytes":  175,
                          "kind":  "captured"
                      },
                      {
                          "file":  "evidence/env-ffmpeg.txt",
-                         "sha256":  "9457c541a9be954c5c43443cdcaa3fce7babffc6890f2d34c4884c9d5d004675",
+                         "sha256":  "51baeefe529c4ad0e83659fddd181e6654cbb8cbc09becf1e2259bab0daa098a",
                          "size_bytes":  2424,
                          "kind":  "captured"
                      },
                      {
                          "file":  "evidence/env-ffprobe.txt",
-                         "sha256":  "08c2337812f968adca9d17b3862770b4ee25ec5726a3f51b139920088b08b7a2",
+                         "sha256":  "8c1eca8cad0b0a19408a3a470c51cd080fca7ed6854499f22a79df4d0ed38455",
                          "size_bytes":  2400,
                          "kind":  "captured"
                      },
                      {
                          "file":  "evidence/env-latex.txt",
-                         "sha256":  "692c5706903d45cd564eb26643de8cdeabe3442e999cfc84bbc5ad33b58f27e8",
+                         "sha256":  "e643d0c926e711f110e367da94df08c22d21ef660df36911129cdd8e5e3fa58a",
                          "size_bytes":  1098,
                          "kind":  "captured"
                      },
                      {
                          "file":  "evidence/env-manim.txt",
-                         "sha256":  "31a57194dce47de8ce49176b2dcdcefb336e1ba70ebad310e4f37de5a74643fd",
+                         "sha256":  "1314b2d079d6786c1a4c5d6fd1bb1dd083529441fec582a74c9b568be9e444b3",
                          "size_bytes":  183,
                          "kind":  "captured"
                      },
                      {
                          "file":  "evidence/env-node.txt",
-                         "sha256":  "0e9f25f4660ce879516e5893131a5aba99b83d985dfad237f595c0ac40ac546a",
+                         "sha256":  "76a3aa7601a37b311a505d4b200563165216c4534c39c7717571f6384c8b42ad",
                          "size_bytes":  167,
                          "kind":  "captured"
                      },
                      {
                          "file":  "evidence/env-npm.txt",
-                         "sha256":  "4d781c977bf1a67bf6a975e1063b8c9399ab69f3821ae7022fbacd6054ba9071",
+                         "sha256":  "5bb946545a81ff1b8205a0dbfa6767c663f85540826042014175ff272f4cad93",
                          "size_bytes":  169,
                          "kind":  "captured"
                      },
                      {
                          "file":  "evidence/env-pdflatex.txt",
-                         "sha256":  "32cbc6a28fc8e497d25a23b919a6c1b4c2611214e6be2d6166863873b966a020",
+                         "sha256":  "b258ac8f1b76fc64ae5fbaea451c9807716bde2a3cce6cdfd4c227c3c536be05",
                          "size_bytes":  1104,
                          "kind":  "captured"
                      },
                      {
                          "file":  "evidence/env-python.txt",
-                         "sha256":  "09188c58420bcfca856e49d17e4f573c1a493b7339d2e9254a0181b9b9448848",
+                         "sha256":  "d5395a233c19235c0977e278d8b50017cb56760611069ccacc90967b9bbd1772",
                          "size_bytes":  174,
                          "kind":  "captured"
                      },
                      {
                          "file":  "evidence/env-python-which-latex.txt",
-                         "sha256":  "cc56957a39a9c813451c9253e6bcd9b5597dd6549aded0be7aa993724b1973c2",
+                         "sha256":  "3fe0f0a0748e83ba602a4226c778b48ef6b5163541fd89909525f8723714b5fc",
                          "size_bytes":  271,
                          "kind":  "captured"
                      },
                      {
                          "file":  "evidence/env-uv.txt",
-                         "sha256":  "035f2dbcccac8105412d74c5499355964b5946fe805e3a08e4eb29c1c499f561",
+                         "sha256":  "fccd6ba0882f811ed46f5e4dbefe90081766eebea56b4e29167a8bd80107e2aa",
                          "size_bytes":  212,
                          "kind":  "captured"
                      },
                      {
                          "file":  "evidence/render-latex-command.txt",
-                         "sha256":  "f0d662d176e019bd3c5de1798008f9fb389b8975dd8d8d5c044e4095975fe992",
-                         "size_bytes":  4060,
+                         "sha256":  "88588d84a376fa5de734161371826d41a9ae501d096a85870ef28cc5ea72df3c",
+                         "size_bytes":  3810,
                          "kind":  "captured"
                      },
                      {
                          "file":  "evidence/render-latex-ffprobe.txt",
-                         "sha256":  "bf302cb6f559a05abafb4c8b04f058e2f7e807e0718965289bc008cadbc926a7",
+                         "sha256":  "0af2479c37a0305e8f68d253543789feb89501b2e858f8c293449fea4652b933",
                          "size_bytes":  289,
                          "kind":  "captured"
                      },
                      {
                          "file":  "evidence-source/probe_latex.py",
-                         "sha256":  "263095b9b55c4876e67be7fdc275a36ac902e737d92168a45b5df310dae684e3",
+                         "sha256":  "024ac7a5cc406e67a2417c4c79aa038f4062546cca3800c573133565f08543eb",
                          "size_bytes":  210,
                          "kind":  "source"
                      }
