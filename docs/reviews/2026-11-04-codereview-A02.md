@@ -66,7 +66,15 @@ Downgrade explícito de PS 7 a PS 5.1 dentro del step. Inconsistente con `#Requi
 
 **M7 — Encoding de `README.md` y `NOTA-RECONCILIACION.md` a verificar.**
 
-La lectura local muestra `??` en lugar de caracteres acentuados. Puede ser artefacto de la cadena de lectura/pegado o corrupción real en el repo. Verificar con `git show HEAD:README.md | Format-Hex | Select-Object -First 3`. Si el repo es correcto, marcar como falso positivo y cerrar.
+La lectura local muestra `??` en lugar de caracteres acentuados. Puede ser artefacto
+de la cadena de lectura/pegado o corrupción real en el repo. Verificación
+byte-accurate (el redirect `>` de PS 5.1 re-encodea a UTF-16 LE y no sirve):
+
+    cmd /c "git show HEAD:README.md > %TEMP%\readme-check.bin"
+    Format-Hex -Path "$env:TEMP\readme-check.bin" | Select-Object -First 8
+
+Si no hay `3F 3F` (`??`) en el contenido y los acentos aparecen como UTF-8
+(`C3 B3`, etc.) → falso positivo, cerrar. Si hay `3F 3F` → corrupción real.
 
 *Destino:* verificación puntual.
 
