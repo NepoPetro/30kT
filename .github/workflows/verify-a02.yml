@@ -1,0 +1,25 @@
+name: Verify A02 evidence bundle
+
+on:
+  pull_request:
+    paths:
+      - 'reports/a02/**'
+  push:
+    branches:
+      - main
+    paths:
+      - 'reports/a02/**'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify evidence manifest
+        shell: pwsh
+        run: powershell -ExecutionPolicy Bypass -File reports/a02/verify.ps1

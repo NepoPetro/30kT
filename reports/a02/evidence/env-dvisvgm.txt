@@ -1,0 +1,8 @@
+﻿command: dvisvgm --version
+agent: Viki Perera
+commit: 758133967e3c19ce7af6a3dc4836bc618bb9521d
+timestamp_utc: 2026-11-04T00:17:07Z
+---
+dvisvgm 3.4.3
+---
+exit_code: 0
