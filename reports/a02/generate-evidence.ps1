@@ -101,6 +101,7 @@ timestamp_utc: $ts
 ---
 exit_code: $ExitCode
 "@
+    $Output = $Output -replace [regex]::Escape($env:USERPROFILE), "<USERPROFILE>"
     $content = $header + "`n" + $Output + "`n" + $footer
     $content | Out-File -FilePath $path -Encoding UTF8
     Write-Host "  evidence/$Name (exit $ExitCode)"
