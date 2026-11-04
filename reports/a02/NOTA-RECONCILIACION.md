@@ -31,3 +31,18 @@ El alcance de A02 sigue siendo read-only, la verificabilidad del bundle se manti
 ## Respaldo
 
 Existe un clon local pre-reescritura, fuera del repositorio, con el historial original. No se publicó y no se publicará.
+
+
+## Adiciones tras code review A02 (2026-11-04)
+
+Referencia: `docs/reviews/2026-11-04-codereview-A02.md`.
+
+### Atribución intencional del campo `agent`
+
+El valor `Viki Perera` en `context-session.txt` y en `manifest.json` es deliberado. Constituye la atribución de autoría bajo licencia MIT. No es fuga de datos personales. Cualquier otro dato identificatorio (paths, usuario de SO, hostname) sí está sanitizado a `<USERPROFILE>`.
+
+### `env-python-which-latex.txt` no contiene una ruta válida
+
+El archivo contiene un `SyntaxError` de Python, no una ruta a `latex`. El fallo proviene de `Invoke-Capture` (`Start-Process -ArgumentList` no cita correctamente el argumento de `python -c` en PS 5.1): Python recibe solo `import` y aborta. El `exit_code` capturado (`0`) es incorrecto (debería ser `1`). El archivo está correctamente hasheado en el manifest — la integridad se cumple — pero su contenido no es evidencia utilizable. Se regenerará tras corregir `Invoke-Capture`, como parte de B02.
+
+En consecuencia, la afirmación "SUCCESS: all 15 entries verified" debe leerse como validación de integridad, no de corrección.
