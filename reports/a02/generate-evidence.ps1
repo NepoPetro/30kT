@@ -67,6 +67,19 @@ function Invoke-Capture {
         Remove-Item $tmpErr -Force -ErrorAction SilentlyContinue
     }
 }
+function Get-NormalizedFileHash {
+    param([string]$Path)
+    $bytes = [System.IO.File]::ReadAllBytes($Path)
+    if ($bytes.Length -ge 3 -and $bytes[0] -eq 0xEF -and $bytes[1] -eq 0xBB -and $bytes[2] -eq 0xBF) {
+        $bytes = $bytes[3..($bytes.Length - 1)]
+    }
+    $text = [System.Text.Encoding]::UTF8.GetString($bytes)
+    $normalized = $text -replace "`r`n", "`n"
+    $normalizedBytes = [System.Text.Encoding]::UTF8.GetBytes($normalized)
+    $sha = [System.Security.Cryptography.SHA256]::Create()
+    $hash = $sha.ComputeHash($normalizedBytes)
+    return ([System.BitConverter]::ToString($hash) -replace "-", "").ToLower()
+}
 
 function Write-Evidence {
     param(
@@ -149,7 +162,7 @@ $evidenceList = @()
 
 Get-ChildItem -Path $evidenceDir -Filter "*.txt" | Sort-Object Name | ForEach-Object {
     $relPath = "evidence/" + $_.Name
-    $hash = (Get-FileHash -Path $_.FullName -Algorithm SHA256).Hash.ToLower()
+    $hash = Get-NormalizedFileHash -Path $_.FullName
     $evidenceList += [PSCustomObject]@{
         file = $relPath
         sha256 = $hash
@@ -160,7 +173,7 @@ Get-ChildItem -Path $evidenceDir -Filter "*.txt" | Sort-Object Name | ForEach-Ob
 
 $sourceFile = Join-Path $sourceDir "probe_latex.py"
 if (Test-Path $sourceFile) {
-    $hash = (Get-FileHash -Path $sourceFile -Algorithm SHA256).Hash.ToLower()
+    $hash = Get-NormalizedFileHash -Path $sourceFile
     $evidenceList += [PSCustomObject]@{
         file = "evidence-source/probe_latex.py"
         sha256 = $hash
