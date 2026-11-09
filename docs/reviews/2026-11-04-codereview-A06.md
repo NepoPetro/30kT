@@ -81,4 +81,6 @@ Accion: registrar como parte de A05 (#6) o ADR posterior.
 
 ## Reversibilidad
 
-Desproteccion total de main:
+> gh api -X DELETE repos/NepoPetro/30kT/branches/main/protection
+
+Advertencia: este comando elimina la proteccion. Ejecutar solo ante incidente justificado. Alternativa preferida: PUT con ajuste de campos individuales, que reemplaza la configuracion completa pero conserva el registro historico del cambio.
