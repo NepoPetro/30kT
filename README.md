@@ -1,6 +1,8 @@
 # 30kT
 
 Proyecto de investigación científico-computacional.
+[![DOI](https://zenodo.org)](https://doi.org)
+[![XERJ Corpus Hub contributor](https://hub.xerj.org/contributors/mvikips/badge.svg)](https://hub.xerj.org/contributors/mvikips)
 
 ## Estado del proyecto
 
