@@ -91,3 +91,21 @@ A saida deve listar os tags esperados. Um tag criado nao deve ser modificado. Se
 ## Excecoes historicas
 
 O tag v.0001 foi criado antes da adocao desta convencao e nao cumpre o formato. Foi excluido em 2026-11-11 sem substituicao. Nao se cria um tag equivalente porque nao corresponde a um encerramento de milestone. A regra aplica-se de agora em diante.
+
+## Protecao
+
+Os tags que coincidem com o padrao v* estao protegidos contra exclusao e modificacao. A protecao e aplicada via rulesets do GitHub e verificada neste documento.
+
+## Configuracao atual:
+
+```bash
+gh api repos/NepoPetro/30kT/rulesets
+```
+Deve listar a regra proteger-tags-v com target tag e enforcement active.
+
+Se a protecao faltar ou precisar ser restabelecida, aplica-se com o arquivo ruleset-tags.json:
+
+```bash
+gh api -X POST repos/NepoPetro/30kT/rulesets --input ruleset-tags.json
+```
+A operacao requer permissoes de administracao sobre o repositorio.

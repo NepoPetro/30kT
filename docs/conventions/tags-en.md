@@ -90,3 +90,21 @@ The output must list the expected tags. A created tag must not be modified. If s
 ## Historical exceptions
 
 The tag v.0001 was created before the adoption of this convention and does not comply with the format. It was deleted on 2026-11-11 without replacement. No equivalent tag is created because it does not correspond to a milestone closure. The rule applies going forward.
+
+## Protection
+
+Tags matching the v* pattern are protected against deletion and modification. Protection is applied via GitHub rulesets and verified in this document.
+
+## Current configuration:
+
+```bash
+gh api repos/NepoPetro/30kT/rulesets
+```
+It must list the proteger-tags-v rule with target tag and enforcement active.
+
+If protection is missing or must be restored, it is applied with the ruleset-tags.json file:
+
+```bash
+gh api -X POST repos/NepoPetro/30kT/rulesets --input ruleset-tags.json
+```
+The operation requires repository administration permissions.

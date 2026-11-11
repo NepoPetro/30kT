@@ -56,7 +56,23 @@ git push origin v0.1.0-a02
 El mensaje sigue el formato "Cierre del Milestone X" donde X es la letra en mayuscula.
 
 ## Proteccion
-Los tags que coinciden con el patron v* estan protegidos contra borrado y modificacion. La proteccion se aplica via API de GitHub y se verifica en este documento.
+
+Los tags que coinciden con el patron v* estan protegidos contra borrado y modificacion. La proteccion se aplica via rulesets de GitHub y se verifica en este documento.
+
+## Configuracion actual:
+
+```bash
+gh api repos/NepoPetro/30kT/rulesets
+```
+
+Debe listar la regla proteger-tags-v con target tag y enforcement active.
+
+Si la proteccion falta o debe restablecerse, se aplica con el archivo ruleset-tags.json:
+
+```bash
+gh api -X POST repos/NepoPetro/30kT/rulesets --input ruleset-tags.json
+```
+La operacion requiere permisos de administracion sobre el repositorio.
 
 ## Configuracion:
 
