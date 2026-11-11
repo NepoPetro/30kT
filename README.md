@@ -1,8 +1,22 @@
 # 30kT
 
 Proyecto de investigación científico-computacional.
-[![DOI](https://zenodo.org)](https://doi.org)
+---
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24144018.svg)](https://doi.org/10.5281/zenodo.24144018) ![GitHub Release](https://img.shields.io/github/v/release/nepopetro/30kT)
 [![XERJ Corpus Hub contributor](https://hub.xerj.org/contributors/mvikips/badge.svg)](https://hub.xerj.org/contributors/mvikips)
+---
+![GitHub top language](https://img.shields.io/github/languages/top/nepopetro/30kT)
+![GitHub Closed Pull Requests](https://img.shields.io/github/issues-pr-closed/nepopetro/30kT)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/nepopetro/30kT)
+![GitHub milestone details](https://img.shields.io/github/milestones/issues-total/nepopetro/30kT/1)
+![GitHub milestone details](https://img.shields.io/github/milestones/issues-total/nepopetro/30kT/2)
+![GitHub milestone details](https://img.shields.io/github/milestones/issues-total/nepopetro/30kT/3)
+![GitHub milestone details](https://img.shields.io/github/milestones/issues-total/nepopetro/30kT/4)
+![GitHub milestone details](https://img.shields.io/github/milestones/issues-total/nepopetro/30kT/5)
+![GitHub milestone details](https://img.shields.io/github/milestones/issues-total/nepopetro/30kT/6)
+![GitHub milestone details](https://img.shields.io/github/milestones/issues-total/nepopetro/30kT/7)
+
 
 ## Estado del proyecto
 
