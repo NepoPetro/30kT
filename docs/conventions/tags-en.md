@@ -86,3 +86,7 @@ The output must list the expected tags. A created tag must not be modified. If s
 - A13 (#15)
 - A06 (#7)
 - A10 (#10): release policy.
+
+## Historical exceptions
+
+The tag v.0001 was created before the adoption of this convention and does not comply with the format. It was deleted on 2026-11-11 without replacement. No equivalent tag is created because it does not correspond to a milestone closure. The rule applies going forward.

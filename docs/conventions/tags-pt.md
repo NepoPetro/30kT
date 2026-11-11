@@ -87,3 +87,7 @@ A saida deve listar os tags esperados. Um tag criado nao deve ser modificado. Se
 - A13 (#15)
 - A06 (#7)
 - A10 (#10): politica de releases.
+
+## Excecoes historicas
+
+O tag v.0001 foi criado antes da adocao desta convencao e nao cumpre o formato. Foi excluido em 2026-11-11 sem substituicao. Nao se cria um tag equivalente porque nao corresponde a um encerramento de milestone. A regra aplica-se de agora em diante.
