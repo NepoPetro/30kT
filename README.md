@@ -49,6 +49,15 @@ Este proyecto no emite opinión. Expone análisis basados en procedimiento cient
 
 Las limitaciones, incertidumbres y decisiones metodológicas se documentan en los artefactos del repositorio a medida que se producen. La ausencia de un dato en una fuente pública no demuestra por sí sola que el dato no exista en registros internos de un organismo.
 
+
+## Seguridad
+
+Para reportar vulnerabilidades, ver [SECURITY.md](SECURITY.md) (español). Versiones en portugués e inglés: [SECURITY-pt.md](SECURITY-pt.md) y [SECURITY-en.md](SECURITY-en.md).
+
+Canal único de reporte: GitHub Security Advisories privados. No se aceptan reportes por issues públicos, PRs ni redes sociales.
+
+Alcance: exposición de datos personales, integridad de datos, procedencia y atribución, credenciales y secretos, CI/CD y cadena de suministro, código y scripts, documentación riesgosa, y configuración de acceso y permisos.
+
 ## Licencia
 
 MIT. Ver [LICENSE](LICENSE).
